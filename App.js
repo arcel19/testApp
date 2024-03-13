@@ -11,41 +11,25 @@ import {
   TouchableNativeFeedback,
   Button,
   Alert,
-  Platform
+  Platform,
+  Dimensions,
 } from "react-native";
 
 export default function App() {
-  const handleOnPress = () => console.log("text press");
-
+  console.log(Dimensions.get("screen"));
   return (
     <SafeAreaView style={styles.container}>
-     
-      {/* <TouchableNativeFeedback onPress={() => console.log("touch image")}>
-        <Image
-          blurRadius={10}
-          fadeDuration={1000} 
-          source={{
-            width: 200,
-            height: 300, 
-            uri: "https://picsum.photos/200/300",
-          }}
-        />
-        <View style={{ width: 200, height: 70, backgroundColor: "dodgerblue" }}>
-          <Text> hello</Text>
-        </View>
-      </TouchableNativeFeedback> */}
-
-      <Button
-        color="orange" 
-        title="press Me"
-        onPress={() =>
-          Alert.alert("my title", "my message", [
-            { text: "yes", onPress: () => console.log("yes press") },
-            { text: "no", onPress: () => console.log("no press") },
-          ]) 
-          // Alert.prompt("my tilte", "submit", (text) => console.log("insert text"))
-        }
-      />
+      <View
+        style={{
+          backgroundColor: "dodgerblue",
+          width: "100%",
+          height: "50%",
+          justifyContent: "center",
+          alignItems: "center"
+        }}
+      >
+        <Text > Hello</Text>
+      </View>
     </SafeAreaView>
   );
 }
@@ -54,7 +38,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff",
-    paddingTop: Platform.OS ==='android' ? 20 : 0 ,
-    
+    paddingTop: Platform.OS === "android" ? 20 : 0,
   },
 });
