@@ -2,9 +2,10 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
+  console.log("App is running");
   return (
     <View style={styles.container}>
-      <Text>Arcelcapital app !</Text>
+      <Text>Arcelcapital hello test go !</Text>
       <StatusBar style="auto" />
     </View>
   );
